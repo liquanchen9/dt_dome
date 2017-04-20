@@ -23,8 +23,15 @@
         var map = new AMap.Map('container',{
             resizeEnable: true,
             zoom: 10,
-            center: [116.480983, 40.0958]
+            center: [121.156181,27.836057]//洞头区 中心点
         });
+        
+        AMap.plugin(['AMap.CloudDataLayer'],function(){
+		    var cloudDataLayer = new AMap.CloudDataLayer('58f815c6305a2a06c4e96b8a', layerOptions);
+			cloudDataLayer.setMap(map);//添加到地图
+		});
+		
+		
     </script>
   
   </body>
