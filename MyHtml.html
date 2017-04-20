@@ -26,11 +26,7 @@
             center: [121.156181,27.836057]//洞头区 中心点
         });
         
-        AMap.plugin(['AMap.CloudDataLayer'],function(){
-		    var cloudDataLayer = new AMap.CloudDataLayer('58f815c6305a2a06c4e96b8a', {});
-			cloudDataLayer.setMap(map);//添加到地图
-		});
-		
+      
 		(function(){
 			//加载行政区划插件
        		AMap.service('AMap.DistrictSearch', function() {
@@ -63,7 +59,12 @@
                 }
             });
         });
-		})()
+		})();
+		
+		AMap.plugin(['AMap.CloudDataLayer'],function(){
+		    var cloudDataLayer = new AMap.CloudDataLayer('58f815c6305a2a06c4e96b8a', {});
+			cloudDataLayer.setMap(map);//添加到地图
+		});
 		
     </script>
   
