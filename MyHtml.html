@@ -23,6 +23,7 @@
         var map = new AMap.Map('container',{
             resizeEnable: true,
             zoom: 12,
+            layers: [new AMap.TileLayer.Satellite()],
             center: [121.046182,27.897788]//洞头区 中心点
         });
         
